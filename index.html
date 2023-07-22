@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>Technical Documentation Page</title>
   </head>
 
@@ -66,15 +67,21 @@
         <ol>
           <code>
             <li>
-              console.log( 2 &gt 1 );
+              <span class="red-keyword">console.log</span>(
+              <span class="purple-keyword">2</span> &gt
+              <span class="purple-keyword">1</span> );
               <span class="codecomment">// true (correct)</span>
             </li>
             <li>
-              console.log( 2 == 1 );
+              <span class="red-keyword">console.log</span>(
+              <span class="purple-keyword">2</span> ==
+              <span class="purple-keyword">1</span> );
               <span class="codecomment">// false (wrong)</span>
             </li>
             <li>
-              console.log( 2 != 1 );
+              <span class="red-keyword">console.log</span>(
+              <span class="purple-keyword">2</span> !=
+              <span class="purple-keyword">1</span> );
               <span class="codecomment">// true (correct)</span>
             </li>
           </code>
@@ -83,19 +90,22 @@
           A comparison result can be assigned to a variable, just like any
           value:
         </p>
-        <code>
-          <ol>
+        <ol>
+          <code>
             <li>
-              let result = 5 &gt 4;
+              <span class="pink-keyword">let</span> result =
+              <span class="purple-keyword">5</span> &gt
+              <span class="purple-keyword">4</span>;
               <span class="codecomment"
                 >// assign the result of the comparison</span
               >
             </li>
             <li>
-              console.log( result ); <span class="codecomment">// true</span>
+              <span class="red-keyword">console.log</span>( result );
+              <span class="codecomment">// true</span>
             </li>
-          </ol>
-        </code>
+          </code>
+        </ol>
       </section>
       <section class="main-section" id="String_comparison">
         <header>String comparison</header>
@@ -109,24 +119,29 @@
           <br />
           For example:
         </p>
-        <code>
-          <ol>
+        <ol>
+          <code>
             <li>
-              console.log( 'Z' &gt 'A' );
+              <span class="red-keyword">console.log</span>(
+              <span class="yellow-keyword">'Z'</span> &gt
+              <span class="yellow-keyword">'A'</span> );
               <span class="codecomment">// true</span>
             </li>
             <li>
-              console.log( 'Glow' &gt 'Glee' );
+              <span class="red-keyword">console.log</span>(
+              <span class="yellow-keyword">'Glow'</span> &gt
+              <span class="yellow-keyword">'Glee'</span> );
               <span class="codecomment">// true</span>
             </li>
             <li>
-              console.log( 'Bee' &gt 'Be' );
+              <span class="red-keyword">console.log</span>(
+              <span class="yellow-keyword">'Bee'</span> &gt
+              <span class="yellow-keyword">'Be'</span> );
               <span class="codecomment">// true</span>
             </li>
-          </ol>
-        </code>
+          </code>
+        </ol>
         <p>The algorithm to compare two strings is simple:</p>
-        <br />
         <ol class="string-algorithm">
           <li>Compare the first character of both strings.</li>
           <li>
@@ -154,37 +169,44 @@
           <br />
           For example:
         </p>
-        <code>
-          <ol>
+        <ol>
+          <code>
             <li>
-              console.log( '2' &gt 1 );
+              <span class="red-keyword">console.log</span>(
+              <span class="yellow-keyword">'2'</span> &gt
+              <span class="purple-keyword">1</span> );
               <span class="codecomment"
                 >// true, string '2' becomes a number</span
               >
             </li>
             <li>
-              console.log( '01' == 1 );
+              <span class="red-keyword">console.log</span>(
+              <span class="yellow-keyword">'01'</span> ==
+              <span class="purple-keyword">1</span> );
               <span class="codecomment"
                 >// true, string '01' becomes a number</span
               >
             </li>
-          </ol>
-        </code>
+          </code>
+        </ol>
         <p>
           For boolean values, <code>true</code> becomes <code>1</code> and
           <code>false</code> becomes <code>0</code>. <br /><br />For example:
         </p>
-        <code>
-          <ol>
+        <ol>
+          <code>
             <li>
-              console.log( true == 1 ); <span class="codecomment">// true</span>
-            </li>
-            <li>
-              console.log( false == 0 );
+              <span class="red-keyword">console.log</span>( true ==
+              <span class="purple-keyword">1</span> );
               <span class="codecomment">// true</span>
             </li>
-          </ol>
-        </code>
+            <li>
+              <span class="red-keyword">console.log</span>( false ==
+              <span class="purple-keyword">0</span> );
+              <span class="codecomment">// true</span>
+            </li>
+          </code>
+        </ol>
       </section>
       <section class="main-section" id="Strict_equality">
         <header>Strict equality</header>
@@ -192,23 +214,24 @@
           A regular equality check <code>==</code> has a problem. It cannot
           differentiate <code>0</code> from <code>false</code>:
         </p>
-        <code>
-          <ol>
+        <ol>
+          <code>
             <li>
-              console.log( 0 == false );
+              <span class="red-keyword">console.log</span>(
+              <span class="purple-keyword">0</span> == false );
               <span class="codecomment">// true</span>
             </li>
-          </ol>
-        </code>
+          </code>
+        </ol>
         <p>The same thing happens with an empty string:</p>
-        <code>
-          <ol>
+        <ol>
+          <code>
             <li>
-              console.log( '' == false );
+              <span class="red-keyword">console.log</span>( '' == false );
               <span class="codecomment">// true</span>
             </li>
-          </ol>
-        </code>
+          </code>
+        </ol>
         <p>
           This happens because operands of different types are converted to
           numbers by the equality operator <code>==</code>.An empty string, just
@@ -228,16 +251,17 @@
           <br />
           Let's try it:
         </p>
-        <code>
-          <ol>
+        <ol>
+          <code>
             <li>
-              console.log( 0 === false );
+              <span class="red-keyword">console.log</span>(
+              <span class="purple-keyword">0</span> === false );
               <span class="codecomment"
                 >// false, because the types are different</span
               >
             </li>
-          </ol>
-        </code>
+          </code>
+        </ol>
         <p>
           There is also a “strict non-equality” operator
           <code>!==</code> analogous to <code>!=</code>.
@@ -252,30 +276,38 @@
           <br />
           For a strict equality check <code>===</code> :
         </p>
-        <code>
-          <ol>
+        <ol>
+          <code>
             <li>
-              console.log( null === undefined );
+              <span class="red-keyword">console.log</span>(
+              <span class="pink-keyword">null</span> ===
+              <span class="pink-keyword">undefined</span>
+              );
               <span class="codecomment">// false</span>
             </li>
-          </ol>
-        </code>
+          </code>
+        </ol>
         <p>For a non-strict check <code>==</code> :</p>
-        <code>
-          <ol>
+        <ol>
+          <code>
             <li>
-              console.log( null == undefined );
+              <span class="red-keyword">console.log</span>(
+              <span class="pink-keyword">null</span> ==
+              <span class="pink-keyword">undefined</span> );
               <span class="codecomment">// true</span>
             </li>
-          </ol>
-        </code>
-        <p>For maths and other comparisons</p>
-        <code>&lt; &gt; &lt;= &gt;=</code> : <code>null/undefined</code> are
-        converted to numbers: <code>null</code> becomes <code>0</code>. while
+          </code>
+        </ol>
+        <p>
+          For maths and other comparisons <code>&lt; &gt; &lt;= &gt;=</code> :
+        </p>
+        <code>null/undefined</code> are converted to numbers:
+        <code>null</code> becomes <code>0</code>. while
         <code>undefined</code> becomes <code>NaN</code>
         <br />
+        <br />
         Avoid problems:
-        <ol>
+        <ul>
           <li>
             Treat any comparison with <code>undefined/null</code> except the
             strict equality === with exceptional care.
@@ -286,7 +318,7 @@
             really sure of what you're doing.<br />If a variable can have these
             values, check for them separately.
           </li>
-        </ol>
+        </ul>
       </section>
       <section class="main-section" id="Summary">
         <header>Summary</header>

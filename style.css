@@ -1,0 +1,91 @@
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  background-color: #232529;
+  color: white;
+}
+::selection {
+  background-color: #f9f9f9;
+  color: black;
+}
+#navbar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 275px;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #292c31;
+  color: white;
+  border-right: 1px solid #0052e7;
+  padding-bottom: 100%;
+}
+#navbar header {
+  font-family: monospace;
+  font-style: italic;
+  text-align: center;
+  padding: 10px;
+  border-bottom: solid 1px #97979794;
+}
+#navbar a {
+  text-decoration: none;
+  color: white;
+  font-size: 21px;
+  border-bottom: 1px solid rebeccapurple;
+  padding: 0 0 10px 12px;
+}
+#navbar a:hover {
+  color: yellow;
+}
+#main-doc {
+  position: absolute;
+  left: 300px;
+  font-size: 24px;
+  padding: 20px;
+  line-height: 1.75;
+}
+#main-doc:not(header) {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+section header {
+  font-size: 42px;
+  font-weight: 800;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: #27eaeb;
+}
+ol:not(.string-algorithm),
+code {
+  background-color: #2b2e41;
+}
+ol:not(.string-algorithm) li:before {
+  content: counter(level1) " "; /*Instead of ". " */
+  counter-increment: level1;
+  content: counter(item) "  ";
+  counter-increment: item;
+}
+ol:not(.string-algorithm) {
+  counter-reset: item;
+  list-style-type: none;
+}
+::marker {
+  color: #078000;
+}
+.codecomment {
+  color: #838383b5;
+}
+.pink-keyword {
+  color: #ff79c6;
+}
+.red-keyword {
+  color: #f1414f;
+}
+.purple-keyword {
+  color: #bd93f9;
+}
+.yellow-keyword {
+  color: #f1fa8c;
+}
