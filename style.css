@@ -1,3 +1,4 @@
+/* smooth scrolling behavior for the entire HTML document */
 html {
   scroll-behavior: smooth;
 }
@@ -6,10 +7,12 @@ body {
   background-color: #232529;
   color: white;
 }
+/* styles for the selected text */
 ::selection {
   background-color: #f9f9f9;
   color: black;
 }
+/* styles for the navbar */
 #navbar {
   position: fixed;
   left: 0;
@@ -24,6 +27,7 @@ body {
   border-right: 1px solid #0052e7;
   padding-bottom: 100%;
 }
+/* navbar header styling */
 #navbar header {
   font-family: monospace;
   font-style: italic;
@@ -31,6 +35,7 @@ body {
   padding: 10px;
   border-bottom: solid 1px #97979794;
 }
+/* styles for the navbar links */
 #navbar a {
   text-decoration: none;
   color: white;
@@ -41,6 +46,7 @@ body {
 #navbar a:hover {
   color: yellow;
 }
+/* main document section */
 #main-doc {
   position: absolute;
   left: 300px;
@@ -48,32 +54,39 @@ body {
   padding: 20px;
   line-height: 1.75;
 }
+/* styles for the main document content excluding the header */
 #main-doc:not(header) {
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
+/* styles for section headers */
 section header {
   font-size: 42px;
   font-weight: 800;
   font-family: Georgia, "Times New Roman", Times, serif;
   color: #27eaeb;
 }
+/* styles for code blocks and code elements */
 ol:not(.string-algorithm),
 code {
   background-color: #2b2e41;
 }
+/* styles for list items in code blocks */
 ol:not(.string-algorithm) li:before {
-  content: counter(level1) " "; /*Instead of ". " */
+  content: counter(level1) " ";
   counter-increment: level1;
   content: counter(item) "  ";
   counter-increment: item;
 }
+/* reset the counter and set list styles for code blocks */
 ol:not(.string-algorithm) {
   counter-reset: item;
   list-style-type: none;
 }
+/* color for list item markers */
 ::marker {
   color: #078000;
 }
+/* code comments styling */
 .codecomment {
   color: #838383b5;
 }
